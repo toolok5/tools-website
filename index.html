@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>祝亮亮的工具库 - 高效数据处理解决方案</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- 加载页面 -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <p>正在加载精彩内容...</p>
+    </div>
+
     <header>
         <div class="header-content">
             <h1>欢迎来到祝亮亮的工具库</h1>
             <p class="subtitle">高效的数据处理解决方案</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索工具...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
         </div>
         <nav>
-            <ul>
-                <li><a href="#tools">工具展示</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#contact">联系方式</a></li>
-            </ul>
+            <div class="container nav-container">
+                <div class="logo">工具库</div>
+                <ul>
+                    <li><a href="#tools"><i class="fas fa-toolbox"></i> 工具展示</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> 关于我</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> 联系方式</a></li>
+                    <li><a href="https://github.com/toolok5" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,64 +54,98 @@
             <div class="tools-container">
                 <!-- 工具卡片1 -->
                 <div class="tool-card">
-                    <img src="images/回单资料整理工具主界面.jpg" alt="回单资料整理工具" class="tool-image">
+                    <div class="card-image-container">
+                        <img src="images/回单资料整理工具主界面.jpg" alt="回单资料整理工具" class="tool-image">
+                        <div class="tool-badge">高效处理</div>
+                    </div>
                     <div class="tool-content">
-                        <h3 class="tool-title">回单资料整理工具</h3>
+                        <div class="tool-header">
+                            <h3 class="tool-title">回单资料整理工具</h3>
+                            <span class="tool-version">v1.2.0</span>
+                        </div>
                         <p class="tool-description">专业的资料批量处理工具，包含指标整理、log截图和文件名批量修改三大功能模块。</p>
                         
                         <div class="instructions">
                             <h4>使用说明</h4>
-                            <h5>指标整理：</h5>
-                            <ul>
-                                <li>请按照程序提示选择需要处理的文件（可以多选）</li>
-                                <li>处理结果将直接保存在当前文件夹中</li>
-                            </ul>
-                            <h5>log截图：</h5>
-                            <ul>
-                                <li>请按照程序提示选择保存log的文件夹（log文件名前面部分按照"地名+4/5G"命名）</li>
-                                <li>整理图片将保存在当前目录</li>
-                            </ul>
-                            <h5>文件名批量修改：</h5>
-                            <ul>
-                                <li>请选择需要修改文件名的文件</li>
-                                <li>按照提示输入需要修改的内容（","前面是被修改字段，","后面是修改后的字段）</li>
-                            </ul>
+                            <div class="instruction-content">
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-chart-line"></i> 指标整理：</h5>
+                                    <ul>
+                                        <li>请按照程序提示选择需要处理的文件（可以多选）</li>
+                                        <li>处理结果将直接保存在当前文件夹中</li>
+                                    </ul>
+                                </div>
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-camera"></i> log截图：</h5>
+                                    <ul>
+                                        <li>请按照程序提示选择保存log的文件夹（log文件名前面部分按照"地名+4/5G"命名）</li>
+                                        <li>整理图片将保存在当前目录</li>
+                                    </ul>
+                                </div>
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-edit"></i> 文件名批量修改：</h5>
+                                    <ul>
+                                        <li>请选择需要修改文件名的文件</li>
+                                        <li>按照提示输入需要修改的内容（","前面是被修改字段，","后面是修改后的字段）</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         
-                        <a href="downloads/回单资料整理工具.zip" class="download-btn">下载工具</a>
+                        <div class="card-actions">
+                            <a href="downloads/回单资料整理工具.zip" class="download-btn"><i class="fas fa-download"></i> 下载工具</a>
+                            <button class="info-btn" data-tool="回单资料整理工具"><i class="fas fa-info-circle"></i> 详情</button>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- 工具卡片2 -->
                 <div class="tool-card">
-                    <img src="images/订单数据处理工具合并版主界面.jpg" alt="订单数据处理工具" class="tool-image">
+                    <div class="card-image-container">
+                        <img src="images/订单数据处理工具合并版主界面.jpg" alt="订单数据处理工具" class="tool-image">
+                        <div class="tool-badge">数据分析</div>
+                    </div>
                     <div class="tool-content">
-                        <h3 class="tool-title">订单数据处理工具</h3>
+                        <div class="tool-header">
+                            <h3 class="tool-title">订单数据处理工具</h3>
+                            <span class="tool-version">v2.0.1</span>
+                        </div>
                         <p class="tool-description">功能强大的数据处理与分析工具，包含MR性能数据处理、规划数据处理和参数数据处理三大模块。</p>
                         
                         <div class="instructions">
                             <h4>使用说明</h4>
-                            <h5>MR性能数据处理模块：</h5>
-                            <ul>
-                                <li>首选将MR和性能原始数据分别放在2个文件夹里面</li>
-                                <li>把"去后缀名.bat"也放在文件夹目录下双击运行后自动去除后缀名，然后将文件全部解压</li>
-                                <li>运行"LTE匹配处理"或"NR匹配处理"程序</li>
-                                <li>匹配结束后可以查看结果保存在"C:\excel"文件夹里</li>
-                            </ul>
-                            <h5>规划数据处理模块：</h5>
-                            <ul>
-                                <li>根据月度处理源文件，日期格式为'2024/04/16-2024/04/28'</li>
-                                <li>筛选地市时要注意地市之间的逗号，比如'温州,丽水'</li>
-                                <li>固定全部输出文件结果都在'C:\excel'</li>
-                            </ul>
-                            <h5>参数数据处理模块：</h5>
-                            <ul>
-                                <li>建议按照"邻区参数→邻区添加→普通参数→总流量添加→表格行数统计→删减行数"顺序按需运行</li>
-                                <li>(邻区添加)一定要先全部选择4到4的csv文件运行完后,再次运行程序选其他文件</li>
-                            </ul>
+                            <div class="instruction-content">
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-database"></i> MR性能数据处理模块：</h5>
+                                    <ul>
+                                        <li>首选将MR和性能原始数据分别放在2个文件夹里面</li>
+                                        <li>把"去后缀名.bat"也放在文件夹目录下双击运行后自动去除后缀名，然后将文件全部解压</li>
+                                        <li>运行"LTE匹配处理"或"NR匹配处理"程序</li>
+                                        <li>匹配结束后可以查看结果保存在"C:\excel"文件夹里</li>
+                                    </ul>
+                                </div>
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-project-diagram"></i> 规划数据处理模块：</h5>
+                                    <ul>
+                                        <li>根据月度处理源文件，日期格式为'2024/04/16-2024/04/28'</li>
+                                        <li>筛选地市时要注意地市之间的逗号，比如'温州,丽水'</li>
+                                        <li>固定全部输出文件结果都在'C:\excel'</li>
+                                    </ul>
+                                </div>
+                                <div class="instruction-group">
+                                    <h5><i class="fas fa-cogs"></i> 参数数据处理模块：</h5>
+                                    <ul>
+                                        <li>建议按照"邻区参数→邻区添加→普通参数→总流量添加→表格行数统计→删减行数"顺序按需运行</li>
+                                        <li>(邻区添加)一定要先全部选择4到4的csv文件运行完后,再次运行程序选其他文件</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         
-                        <a href="downloads/订单数据处理工具.zip" class="download-btn">下载工具</a>
+                        <div class="card-actions">
+                            <a href="downloads/订单数据处理工具.zip" class="download-btn"><i class="fas fa-download"></i> 下载工具</a>
+                            <button class="info-btn" data-tool="订单数据处理工具"><i class="fas fa-info-circle"></i> 详情</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,16 +153,49 @@
 
         <section id="about">
             <h2>关于我</h2>
-            <p>我是一名专注于数据处理和自动化脚本开发的工程师，致力于为用户提供高效、实用的数据处理工具。多年来，我一直在不断优化和改进这些工具，以满足用户的各种需求。</p>
-            <p>这些工具主要针对特定行业的数据处理需求，能够显著提高数据处理效率，减少人工操作的时间成本。如果您有任何功能建议或遇到使用问题，欢迎联系我。</p>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><i class="fas fa-laptop-code"></i> 我是一名专注于数据处理和自动化脚本开发的工程师，致力于为用户提供高效、实用的数据处理工具。多年来，我一直在不断优化和改进这些工具，以满足用户的各种需求。</p>
+                        <p><i class="fas fa-chart-pie"></i> 这些工具主要针对特定行业的数据处理需求，能够显著提高数据处理效率，减少人工操作的时间成本。如果您有任何功能建议或遇到使用问题，欢迎联系我。</p>
+                    </div>
+                    <div class="skills">
+                        <h3>技能专长</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">数据分析</span>
+                            <span class="skill-tag">自动化脚本</span>
+                            <span class="skill-tag">Excel处理</span>
+                            <span class="skill-tag">GUI开发</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
             <h2>联系方式</h2>
-            <div class="contact-info">
-                <p>如果您在使用过程中遇到任何问题，或者有新的功能需求，欢迎随时联系我：</p>
-                <p><strong>微信/手机：</strong>15057337780</p>
-                <p>感谢您的支持和理解！</p>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>反馈与支持</h3>
+                        <p>如果您在使用过程中遇到任何问题，或者有新的功能需求，欢迎随时联系我</p>
+                        <div class="contact-method">
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>手机/微信：15057337780</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/toolok5" target="_blank">GitHub: toolok5</a>
+                            </div>
+                        </div>
+                        <p class="thanks-message">感谢您的支持和理解！</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
